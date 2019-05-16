@@ -1,0 +1,15 @@
+/* pages/word/index/index.wxss */
+.list{
+  padding: 2.2vh 3vw;
+  border-bottom: 1rpx solid #f1f1f1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#add{
+  width: 6vh;
+  height: 6vh;
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+}

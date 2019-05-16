@@ -1,0 +1,18 @@
+/* pages/add/bklist/bklist.wxss */
+.clas>view{
+  border-bottom: solid #ccc 1px;
+  padding:2.2vh;
+}
+#bks{
+  padding-left: 10vw;
+  background: #f5f5f5;
+}
+#bks>view{
+  padding: 10rpx;
+}
+#bks_box{
+  padding: 0px;
+}
+#main{
+  padding: 0px 2vw;
+}

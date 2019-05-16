@@ -1,0 +1,11 @@
+<!--pages/add/bklist/bklist.wxml-->
+<view id='main'>
+<view class='clas' wx:for="{{clas}}" wx:for-index="index" wx:for-item="item" wx:key='k'>
+  <view bindtap='acClas' id='clas_list_{{index}}' data-idx='{{index}}' data-clasid='{{item.bk_id}}'>{{item.bk_name}}</view>
+  <view id='bks_box'  wx:if='{{clasId==item.bk_id}}'>
+    <view id='bks' wx:for="{{bks}}" wx:for-index="idex2" wx:for-item="item2" wx:key='k2'>
+      <view  bindtap='acBk' data-bkid='{{item2.bk_id}}'>{{item2.bk_name}}<text style='float:right; font-size: small;'>{{item2.bk_direct_item_num}}</text></view>
+    </view>
+  </view>
+</view>
+</view>

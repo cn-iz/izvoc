@@ -1,0 +1,54 @@
+<block wx:if='{{show}}'>
+   <view class='top'>
+        <image class='vc_ac' src="/imgs/word/{{vc.isac?'':'no'}}ac.png" bindtap='acVc' data-idx='{{index}}'></image>
+        <view style="font-size: 50rpx;text-align:center;width:100%;line-height:8vh;">{{vc.vc_vocabulary}}</view>
+        <view class='top_right'>
+          <image class='horn' src='/imgs/more.png' bindtap='more' data-idx='{{index}}'></image>
+        </view>
+      </view>
+      <scroll-view style="height:92vh;background: #eee;" scroll-x="false" scroll-y="true">
+        <view style='padding:2vw;background: #fff;'>
+          <view wx:if='{{vc.vc_phonetic_us}}' class='phonetic' style='font-size:31rpx;' bindtap='runhorn' data-h='2' data-idx='{{index}}'>
+            美{{vc.vc_phonetic_us}}
+            <image class='horn_b' wx:if="{{runhorn!=2&&vc.vc_ph_us}}" src='/imgs/word/horn.png' data-idx='{{index}}'></image>
+            <image class='horn_b' wx:if="{{runhorn==2&&vc.vc_ph_us}}" src='/imgs/word/horn_run.png'></image>
+          </view>
+          <view wx:if='{{vc.vc_phonetic_uk}}' class='phonetic' style='font-size:31rpx;padding-top:1vw;' bindtap='runhorn' data-h='3' data-idx='{{index}}'>
+            英{{vc.vc_phonetic_uk}}
+            <image class='horn_b' wx:if="{{runhorn!=3&&vc.vc_ph_en}}" src='/imgs/word/horn.png' data-idx='{{index}}'></image>
+            <image class='horn_b' wx:if="{{runhorn==3&&vc.vc_ph_en}}" src='/imgs/word/horn_run.png'></image>
+          </view>
+          <view class='mean' wx:for="{{vc.vc_explain_baes}}" wx:for-index="idx" wx:for-item="item3" wx:key='k3'>
+            <text wx:if="{{item3.part!='ph.'}}">{{item3.part}}</text>
+            <view>
+              <block wx:for="{{item3.means}}" wx:for-item="m" wx:for-index="idx" wx:key='k4'>
+                {{m}}
+                <block wx:if="{{idx<item3.means.length-1}}" wx:for-item="m" wx:for-index="idx">;</block>
+              </block>
+            </view>
+          </view>
+        </view>
+        <view class='sts'>
+          <view class='st' wx:for="{{sts[vc.vc_id]}}" wx:for-index="index2" wx:for-item="item2" wx:key='k2' bindtap='openvideo' data-src='{{item2.mp3}}'>
+            <view class='en'>
+              <block wx:for="{{item2.english}}" wx:for-index="index5" wx:for-item="word" wx:key='k5'>
+                <view class="{{word.isvc?'thatword':''}}" wx:if="{{word!=''&&word!=','&&word!='.'}}" bindtap='findword' data-word='{{word.word}}'>
+                  {{word.word}}
+                </view>
+                <block wx:if="{{word==','||word=='.'}}"> {{word.word}}</block>
+              </block>
+            </view>
+            <view class='ch'>{{item2.chinese}}</view>
+            <image class='st_ac' src="/imgs/word/{{item2.isac?'':'no'}}ac.png" data-vcid='{{vc.vc_id}}' data-idx='{{index2}}'></image>
+          </view>
+          <view style='padding:6vh;'></view>
+        </view>
+      </scroll-view>
+</block> 
+
+<view id='bar'>
+  <button bindtap='start'>开始</button>
+  <button bindtap='show'>显示</button>
+</view>
+
+

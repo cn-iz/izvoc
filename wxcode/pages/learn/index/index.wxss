@@ -1,0 +1,61 @@
+#week{
+  display: flex;
+  color: #515151;
+}
+#week>view{
+  flex: 1;
+  text-align: center;
+  font-size: 31rpx;
+}
+.ds_view{
+  text-align: center;
+  width: calc(96% / 7);
+  font-size: 35rpx;
+  padding: 2vh 0px;
+  border-bottom: #fff solid 1rpx;
+}
+#ds{
+  padding: 0px 2vw;
+   flex-wrap: wrap;
+   display: flex;
+   color: #515151;
+}
+#ac{
+  box-sizing: border-box;
+  border-bottom: orangered solid 1rpx;
+}
+.nowday{
+  color: orangered;
+}
+.greenyellow{
+  color: rgb(86, 233, 164);
+}
+#year{
+  display: flex;
+  color: #515151;
+}
+#year>view{
+  height: 8vh;
+  flex:1;
+  text-align:center;
+  line-height: 8vh;
+}
+#year>image{
+  height: 4vh;
+  width: 4vh;
+  padding: 2vh 4vw;
+  height: 
+}
+#bottom{
+  position: absolute;
+  bottom: 5vh;
+}
+#bottom>view{
+  padding: 2vw;
+  margin-bottom: 1vh;
+  background: rgb(86, 233, 164);
+  width: 80vw;
+  margin-left: 10vw;
+  text-align: center;
+  border-radius: 1vw;
+}

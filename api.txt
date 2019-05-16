@@ -1,0 +1,3 @@
+百度翻译：http://api.fanyi.baidu.com/api/trans/vip/translate
+金山：http://www.iciba.com/index.php?a=getWordMean&c=search&list=1%2C2%2C3%2C4%2C5%2C8%2C9%2C10%2C12%2C13%2C14%2C18%2C21%2C22%2C3003%2C3005&word=
+百度tts：https://fanyi.baidu.com/gettts?lan=en&text=read%20books&spd=3&source=web

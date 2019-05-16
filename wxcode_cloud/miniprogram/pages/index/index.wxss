@@ -1,0 +1,40 @@
+.list{
+  background: #fff;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAACWCAYAAABn5S6WAAAATUlEQVR4nO3OAREAEAAEsFdA/0ofhwRi4G5LsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBvjLYrybwdecQ+LEUETmUTN5UAAAAASUVORK5CYII=');
+  background-size: contain;
+  padding: 2.5vh;
+  margin: 0px 2vw;
+}
+scroll-view{
+  background: #eee;
+  height: calc(100vh - 9vh);
+}
+#topbar{
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAACWCAYAAABn5S6WAAAATUlEQVR4nO3OAREAEAAEsFdA/0ofhwRi4G5LsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBvjLYrybwdecQ+LEUETmUTN5UAAAAASUVORK5CYII=');
+  background-size: contain;
+}
+#topbar>view{
+  height: 9vh;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+.loader>image{
+  width: 30rpx;
+  height: 30rpx;
+  animation: rotation 2s linear infinite;
+}
+.loader{
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+@keyframes rotation
+{
+ to{transform: rotate(359deg)}
+}

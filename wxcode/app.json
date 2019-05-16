@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/learn/index/index",
+    "pages/word/index/index",
+    "pages/about/index/index",
+    "pages/add/bklist/bklist",
+    "pages/add/vclist/vclist",
+    "pages/word/look/look",
+    "pages/word/learn/learn",
+    "pages/article/index/index",
+    "pages/article/look/look",
+    "pages/learn/word/word",
+    "pages/learn/dictation/dictation"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c1c1c1",
+    "navigationBarTitleText": "背单词",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/learn/index/index",
+        "text": "学习",
+        "iconPath": "imgs/s.png",
+        "selectedIconPath": "imgs/s_ac.png"
+      },
+      {
+        "pagePath": "pages/word/index/index",
+        "text": "单词",
+        "iconPath": "imgs/w.png",
+        "selectedIconPath": "imgs/w_ac.png"
+      },
+      {
+        "pagePath": "pages/article/index/index",
+        "text": "文章",
+        "iconPath": "imgs/a.png",
+        "selectedIconPath": "imgs/a_ac.png"
+      },
+      {
+        "pagePath": "pages/about/index/index",
+        "text": "关于",
+        "iconPath": "imgs/a.png",
+        "selectedIconPath": "imgs/a_ac.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+<!-- <image src='/imgs/line.png' style='height:1px;width:100%;padding:0;'></image> -->
+<!-- style='border-top: 1px solid #ccc;'  -->
+<!-- <view class='list' bindtap='startlearn'>我的收藏
+  <text style='font-size:small;float:right;'>{{acvcs.oksum}}/{{acvcs.vcs.length}}</text>
+</view> -->
+<view class='list' wx:for="{{bkInfo}}" wx:for-index="index" wx:for-item="item" wx:key='k' bindtap='acbk' data-bkid='{{item.bk_id}}' bindlongpress='longtap'>{{item.bk_name}}
+  <text style='font-size:small;float:right;'>{{item.lastidx+1}}/{{item.bk_direct_item_num}}</text>
+</view>
+<image src='/imgs/word/add.png' id='add' bindtap='add'></image>

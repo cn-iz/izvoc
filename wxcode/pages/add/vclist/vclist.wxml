@@ -1,0 +1,12 @@
+<!--pages/add/vclist/vclist.wxml-->
+<view id='topbar'>{{allvcs[idxstart].bv_tag}} <text >{{idxend}} | {{bkInfo.bk_direct_item_num}}</text></view>
+<scroll-view id='sv' scroll-y style="height: 86vh;"  >
+<view  class='list' wx:for="{{forarr}}" wx:for-index="index" wx:for-item="item" wx:key='k'  data-idx='{{index+idxstart}}' id='bt{{index}}'>
+<view  class='ac' style="" >{{allvcs[idxstart+index].vc_vocabulary}}  </view><view class='mean'>{{allvcs[idxstart+index].vc_explain_simple}}</view>
+</view>
+</scroll-view>
+<view id='bottombar'>
+  <image src='/imgs/add/page_l.png' bindtap='bindscrolltoupper'></image>
+  <image src='/imgs/add/page_r.png' bindtap='bindscrolltolower'></image>
+  <image src='/imgs/add/add.png' bindtap='addbook'></image>
+</view>

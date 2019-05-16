@@ -1,0 +1,47 @@
+<scroll-view scroll-y>
+<view style='padding: 2vw 0px;padding-bottom: 20vh;'>
+  <!-- <view class='title'>
+  {{atinfo.name}}
+  </view> -->
+  <view id='info'>
+    <block wx:for="{{atinfo.info}}" wx:for-index="index" wx:for-item="item" wx:key='k'>
+    <view class='en' >
+      <block wx:for="{{item.en}}" wx:for-index="index2" wx:for-item="word" wx:key='k'>
+        <view bindtap='findword' data-w='{{word}}'>{{word}}</view>
+      </block>
+    </view>
+    </block>
+  </view>
+  </view>
+</scroll-view>
+
+<view id='bg' bindtap='closeword' wx:if='{{word}}'></view>
+<view id='word' wx:if="{{word&&word.type!='baidu'}}">
+  <view class='w_title'>{{word.vc_vocabulary}}</view>
+   <view class="ph_bm{{word.vc_explain_baes.length>1?'2':''}}">
+      <view wx:if='{{word.info.ph_am}}' class='phonetic' style='padding:2vw;' bindtap='openvideo' data-src='{{word.info.ph_am_mp3}}'>
+        美[{{word.info.ph_am}}]
+        <image class='horn_bm' src='/images/horn.png' wx:if='{{word.info.ph_am_mp3}}' data-idx='{{index}}'></image>
+      </view>
+      <view wx:if='{{word.info.ph_en}}' class='phonetic' style='padding:2vw;' bindtap='openvideo' data-src='{{word.info.ph_en_mp3}}'>
+        英[{{word.info.ph_en}}]
+        <image class='horn_bm' src='/images/horn.png' wx:if='{{word.info.ph_en_mp3}}' data-idx='{{index}}'></image>
+      </view>
+  </view>
+  <view class='mean_bm' wx:for="{{word.info.parts}}" wx:for-index="idx" wx:for-item="ite" wx:key='k13'>
+    <text wx:if="{{ite.part!='ph.'}}">{{ite.part}}</text>
+    <view>
+      <block wx:for="{{ite.means}}" wx:for-item="m" wx:for-index="idx14" wx:key='k14'>
+        {{m}}
+        <block wx:if="{{idx<ite.means.length-1}}" wx:for-item="m" wx:for-index="idx">;</block>
+      </block>
+    </view>
+  </view>
+</view>
+<view id='word' wx:if="{{word&&word.type=='baidu'}}">
+  <view class='w_title'>{{word.info.src}}</view>
+  <image class='horn_bm' src='/images/horn.png' data-idx='{{index}}'></image>
+  <view  bindtap='openvideo' data-src='/fanyi.baidu.com/gettts?lan=en&text={{word.info.src}}&spd=3&source=web'>{{word.info.dst}}</view>
+  <view>以上内容来自机器翻译，可能有误</view>
+</view>
+

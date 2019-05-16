@@ -1,0 +1,24 @@
+<view id='year'>
+  <image src='/imgs/l.png' bindtap='l'></image>
+  <view >{{ms[m-1]}} {{y}}</view>
+  <image src='/imgs/r.png' bindtap='r'></image>
+</view>
+<view>
+  <view id='week'>
+    <view>Sun</view>
+    <view>Mon</view>
+    <view>Tue</view>
+    <view>Web</view>
+    <view>Thu</view>
+    <view>Fri</view>
+    <view>Sat</view>
+  </view>
+  <view id='ds'>
+    <view id="{{item.date==acdate?'ac':''}}" wx:for='{{ds}}' bindtap='acdate' data-date='{{item.date}}' wx:for-index="index" wx:for-item="item" wx:key='k' class="ds_view {{item.clas}}">{{item.date}}</view>
+  </view>
+</view>
+
+<view id='bottom'>
+  <view bindtap='learnvc'>单词{{vc_count}}</view>
+  <view bindtap='learnst'>句子{{st_count}}</view>
+</view>

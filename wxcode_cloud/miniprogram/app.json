@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/custom/custom",
+    "pages/look/look",
+    "pages/self_look/self_look"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "英文阅读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "images/s.png",
+        "selectedIconPath": "images/s_ac.png"
+      },
+      {
+        "pagePath": "pages/custom/custom",
+        "text": "自定义",
+        "iconPath": "images/w.png",
+        "selectedIconPath": "images/w_ac.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/a.png",
+        "selectedIconPath": "images/a_ac.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
